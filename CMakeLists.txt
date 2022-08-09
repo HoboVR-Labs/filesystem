@@ -73,6 +73,8 @@ endif()
 add_library(boost_filesystem ${BOOST_FILESYSTEM_SOURCES})
 add_library(Boost::filesystem ALIAS boost_filesystem)
 
+target_compile_options(boost_filesystem PRIVATE -fPIC)
+
 target_include_directories(boost_filesystem PUBLIC include)
 target_include_directories(boost_filesystem PRIVATE src)
 
